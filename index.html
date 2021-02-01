@@ -5,30 +5,41 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 .mySlides {display:none;}
+.mySlides2 {display:none;}
+.mySlides3 {display:none;}
 </style>
 <style>
 body {
   background-color: #CCEBFF;
 }
 div {text-align: center;}
+.mySlides{
+  background-color: #EEEEFF;
+}
+.mySlides2{
+  background-color: #DBF1FF;
+}
+.mySlides3{
+  background-color: #9DEAB8;
+}
 </style>
 <body>
 
-<div class="w3-container">
+<div class="w3-container" >
   <h2>LoR Precedence Teacher</h2>
 </div>
 
 <div class="w3-content w3-display-container">
-
+<h4>Puzzle 1: Sudden Death</h4>
 <div class="w3-display-container mySlides">
-  <img src="https://i.imgur.com/QL9mIk2.png" style="height:80vh;">
+  <img src="https://i.imgur.com/QL9mIk2.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
     What's wrong with this selfless supporter?
   </div>
 </div>
 
 <div class="w3-display-container mySlides">
-  <img src="https://i.imgur.com/Jr8RBY6.png" style="height:80vh;">
+  <img src="https://i.imgur.com/Jr8RBY6.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
     It's a small difference, but the skill token on the attack ability stops this from being burst-speed death, which should be avoided.
   </div>
@@ -39,6 +50,52 @@ div {text-align: center;}
 
 </div>
 
+<br>
+
+<div class="w3-content w3-display-container">
+<h4>Puzzle 2: Slipping through your fingers</h4>
+<div class="w3-display-container mySlides2">
+  <img src="https://i.imgur.com/HgNljnk.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    What's wrong with this mage rebel with built-in sharpsight?
+  </div>
+</div>
+
+<div class="w3-display-container mySlides2">
+  <img src="https://i.imgur.com/pkEvI2g.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    There's a much more elegant way to do this without needing to resort to keyword negation, which can confuse newcomers to the game.
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs2(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs2(1)">&#10095;</button>
+
+</div>
+
+<br>
+
+<div class="w3-content w3-display-container">
+<h4>Puzzle 3: King of the Underworld</h4>
+<div class="w3-display-container mySlides3">
+  <img src="https://i.imgur.com/dXdktrQ.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    Urgot's here, but what's wrong with his ability?
+  </div>
+</div>
+
+<div class="w3-display-container mySlides3">
+  <img src="https://i.imgur.com/x78oD8O.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    It functions differently, but the original would ruin the timing of the game due to the skill being able to proc at any time. Imagine your opponent avalanches the first Urgot, triggering its ability. What happens to priority? Does it pass to your opponent because Urgot's skill triggered? But your opponent just played a slow spell! Not fair.
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs3(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs3(1)">&#10095;</button>
+
+</div>
+
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -46,7 +103,6 @@ showDivs(slideIndex);
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
-
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -56,6 +112,40 @@ function showDivs(n) {
      x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+}
+
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  if (n > x.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex2-1].style.display = "block";  
+}
+
+var slideIndex3 = 1;
+showDivs3(slideIndex3);
+
+function plusDivs3(n) {
+  showDivs3(slideIndex3 += n);
+}
+function showDivs3(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides3");
+  if (n > x.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex3-1].style.display = "block";  
 }
 </script>
 
