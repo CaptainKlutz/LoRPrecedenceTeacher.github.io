@@ -8,8 +8,9 @@
 .mySlides2 {display:none;}
 .mySlides3 {display:none;}
 .mySlides4 {display:none;}
-</style>
-<style>
+.mySlides5 {display:none;}
+.mySlides6 {display:none;}
+
 body {
   background-color: #CCEBFF;
 }
@@ -25,6 +26,12 @@ div {text-align: center;}
 }
 .mySlides4{
   background-color: #CDABEA;
+}
+.mySlides5{
+  background-color: #FF9E99;
+}
+.mySlides6{
+  background-color: #ED8099;
 }
 </style>
 <body>
@@ -123,6 +130,56 @@ div {text-align: center;}
 
 </div>
 
+<br>
+
+<div class="w3-content w3-display-container">
+<h4>Puzzle 5: It's a Trap!</h4>
+<div class="w3-display-container mySlides5">
+  <img src="img/Hazard%20Unearthed_bad.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    This alternate puffcap idea has the opponent's units taking damage instead. But something's wrong with the timing.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides5">
+  <img src="img/Hazard%20Unearthed_better.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    If the opponent draws a card at burst speed and this resolves, then it would pass priority- not fair! Luckily, with 'gem-speed', we can solve this issue.
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs5(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs5(1)">&#10095;</button>
+
+</div>
+
+<br>
+
+<div class="w3-content w3-display-container">
+<h4>Puzzle 6: From the Shadows</h4>
+<div class="w3-display-container mySlides6">
+  <img src="img/Shadow%20Ronin_bad.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    This card's author has made a little mistake with this scary samurai.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides6">
+  <img src="img/Shadow%20Ronin_better.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    You need to declare attack to get the challenger effect, but you need the challenger effect before you declare attack! Some rewording fixes this.
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs6(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs6(1)">&#10095;</button>
+
+</div>
+
+<br>
+
+<br>
+
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -190,6 +247,40 @@ function showDivs4(n) {
      x[i].style.display = "none";  
   }
   x[slideIndex4-1].style.display = "block";  
+}
+
+var slideIndex5 = 1;
+showDivs5(slideIndex5);
+
+function plusDivs5(n) {
+  showDivs5(slideIndex5 += n);
+}
+function showDivs5(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides5");
+  if (n > x.length) {slideIndex5 = 1}
+  if (n < 1) {slideIndex5 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex5-1].style.display = "block";  
+}
+
+var slideIndex6 = 1;
+showDivs6(slideIndex6);
+
+function plusDivs6(n) {
+  showDivs6(slideIndex6 += n);
+}
+function showDivs6(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides6");
+  if (n > x.length) {slideIndex6 = 1}
+  if (n < 1) {slideIndex6 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex6-1].style.display = "block";  
 }
 </script>
 
