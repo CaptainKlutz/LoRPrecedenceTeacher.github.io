@@ -7,6 +7,7 @@
 .mySlides {display:none;}
 .mySlides2 {display:none;}
 .mySlides3 {display:none;}
+.mySlides4 {display:none;}
 </style>
 <style>
 body {
@@ -22,6 +23,9 @@ div {text-align: center;}
 .mySlides3{
   background-color: #9DEAB8;
 }
+.mySlides4{
+  background-color: #CDABEA;
+}
 </style>
 <body>
 
@@ -32,15 +36,15 @@ div {text-align: center;}
 <div class="w3-content w3-display-container">
 <h4>Puzzle 1: Sudden Death</h4>
 <div class="w3-display-container mySlides">
-  <img src="https://i.imgur.com/QL9mIk2.png" style="height:75vh">
+  <img src="img/Lights%20Martyr_bad.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
     What's wrong with this selfless supporter?
   </div>
 </div>
 
 <div class="w3-display-container mySlides">
-  <img src="https://i.imgur.com/Jr8RBY6.png" style="height:75vh">
-  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+  <img src="img/Lights%20Martyr_better.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w 3-container w3-padding-16 w3-black">
     It's a small difference, but the skill token on the attack ability stops this from being burst-speed death, which should be avoided.
   </div>
 </div>
@@ -55,14 +59,14 @@ div {text-align: center;}
 <div class="w3-content w3-display-container">
 <h4>Puzzle 2: Slipping through your fingers</h4>
 <div class="w3-display-container mySlides2">
-  <img src="https://i.imgur.com/HgNljnk.png" style="height:75vh">
+  <img src="img/Infiltraitor_bad.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
-    What's wrong with this mage rebel with built-in sharpsight?
+    This stealthy mage breaks Demacian standards, but her wording isn't perfect.
   </div>
 </div>
 
 <div class="w3-display-container mySlides2">
-  <img src="https://i.imgur.com/pkEvI2g.png" style="height:75vh">
+  <img src="img/Infiltraitor_better.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
     There's a much more elegant way to do this without needing to resort to keyword negation, which can confuse newcomers to the game.
   </div>
@@ -78,14 +82,14 @@ div {text-align: center;}
 <div class="w3-content w3-display-container">
 <h4>Puzzle 3: King of the Underworld</h4>
 <div class="w3-display-container mySlides3">
-  <img src="https://i.imgur.com/dXdktrQ.png" style="height:75vh">
+  <img src="img/Urgot%20levelUp_bad.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
-    Urgot's here, but what's wrong with his ability?
+    Urgot's here, but what's wrong with his ability? It even has a token!
   </div>
 </div>
 
 <div class="w3-display-container mySlides3">
-  <img src="https://i.imgur.com/x78oD8O.png" style="height:75vh">
+  <img src="img/Urgot%20levelUp_better.png" style="height:75vh">
   <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
     It functions differently, but the original would ruin the timing of the game due to the skill being able to proc at any time. Imagine your opponent avalanches the first Urgot, triggering its ability. What happens to priority? Does it pass to your opponent because Urgot's skill triggered? But your opponent just played a slow spell! Not fair.
   </div>
@@ -93,6 +97,29 @@ div {text-align: center;}
 
 <button class="w3-button w3-display-left w3-black" onclick="plusDivs3(-1)">&#10094;</button>
 <button class="w3-button w3-display-right w3-black" onclick="plusDivs3(1)">&#10095;</button>
+
+</div>
+
+<br>
+
+<div class="w3-content w3-display-container">
+<h4>Puzzle 4: Cosmic Power</h4>
+<div class="w3-display-container mySlides4">
+  <img src="img/Essence%20Reaver_bad.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    A terrifying dragon from spaces beyond- and a terrifying timing breaker.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides4">
+  <img src="img/Essence%20Reaver_better.png" style="height:75vh">
+  <div class="w3-display-bottomiddle w3-container w3-padding-16 w3-black">
+    You can't just pause the game when an ally dies, for instance in the middle of combat. Making it create a Behold the Infinite solves this problem.
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs4(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs4(1)">&#10095;</button>
 
 </div>
 
@@ -146,6 +173,23 @@ function showDivs3(n) {
      x[i].style.display = "none";  
   }
   x[slideIndex3-1].style.display = "block";  
+}
+
+var slideIndex4 = 1;
+showDivs4(slideIndex4);
+
+function plusDivs4(n) {
+  showDivs4(slideIndex4 += n);
+}
+function showDivs4(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides4");
+  if (n > x.length) {slideIndex4 = 1}
+  if (n < 1) {slideIndex4 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex4-1].style.display = "block";  
 }
 </script>
 
